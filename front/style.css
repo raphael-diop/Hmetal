@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,200&display=swap');
+/* font-family: 'Noto Sans', sans-serif;
+font-family: 'Zen Kaku Gothic Antique', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   font-family:'Zen Kaku Gothic Antique', sans-serif;
+}
+
+h1{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+}
+/*HEADER*/
+
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+}
+
+.logo img{
+    height: 120px;
+    width: 150px;
+    
+}
+
+.logo{
+    z-index: 100;
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    padding: px;
+    flex-direction: row;
+    padding: 1rem 0px;
+    z-index: 100;
+}
+
+.navbar li{
+    margin-right: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: snow;
+    letter-spacing: 1.2px;
+    background-color: rgb(108, 158, 165);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.navbar li a:hover {
+	background:linear-gradient(to bottom, #616366 5%,  #505151 5% 100%);
+	background-color: rgb(106, 116, 119);
+}
+
+
+/*CARROUSEL IMAGES*/
+
+.ImageAcc{
+    position: relative;
+    width: 100%;
+    margin-top:-10%;
+    height: 105vh;
+    background-image:url("./images/salon.jpg") ;
+    /*background-image: url('https://img.helloartisan.com/webbackoffice/article/9/artisan-travaux.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+
+
+
+.rdvAcceuil{
+    margin-top: -36%;
+    margin-left: 8%;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    margin-bottom: 10%;
+    z-index: 10;
+}
+
+.rdvAcceuil h1 {
+    padding: 2%;
+    font-size: 50px;
+    color: snow;
+}
+
+.rdvAcceuil p {
+    margin-bottom: 10%;
+}
+
+.rdvAcceuil h2 {
+    margin-top: 3%;
+}
+
+.rdvAcceuil h2 a{    
+    text-decoration: none;
+    color: snow;
+    letter-spacing: 1.2px;
+    background-color: rgb(108, 158, 165);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.rdvAcceuil h2 a:hover {
+    background:linear-gradient(to bottom, #616366 5%,  #505151 5% 100%);
+	background-color: rgb(106, 116, 119);
+}
+
+.containerPresentation{
+    margin-top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200vh;
+    width: 100%;
+    background-color:rgba(218, 219, 222, 0.614);
+    
+}
+
+.presentationHaut{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+
+.presentationHaut img{
+    width: 500px;
+    height: 600px;
+    margin-left: 5%; 
+}
+
+.presHautText{
+    width: 500px;
+    height:600px;
+    margin-right: 5%;
+}
+
+
+
+.presentationBas{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    
+}
+
+.presentationBas img{
+    width: 500px;
+    height: 600px;
+    margin-right: 5%; 
+    margin-bottom: 5%;
+}
+
+
+.presBasText{
+    width: 500px;
+    height:600px;
+    margin-left: 5%;
+}
+
+
+.containerContact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('https://img.freepik.com/photos-gratuite/homme-soudure-vieux-pelle-fin-haut_127675-2660.jpg?w=2000');
+    background-attachment: fixed;
+
+    height: 45vh;
+    width: 100%;
+    
+}
+
+.containerRéalisations{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 14px rgba(0.3,0.3,0.3,0.3);
+    margin-bottom: 10%;
+    padding-top:2% ;
+    padding-bottom: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.ImgRéal {
+    margin-top:1%;
+    margin-bottom:1%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left:2%;
+}
+
+.ImgRéal img{
+    padding: 2%;
+    width: 33%;
+    height: 400px;
+}
+
+.ImgRéal img:hover{
+   transform: scale(1.1);
+   transition: 2.5s;
+}
+
+
+
+
+
+.voirPlus {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1.2px;
+    background-color: rgb(108, 158, 165);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-top: 4%;
+    cursor: pointer;
+}
+
+.voirPlus:hover {
+    background:linear-gradient(to bottom, #616366 5%,  #505151 5% 100%);
+	background-color: rgb(106, 116, 119);
+}
+
+.avisClient{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+
+.avisClient h1{
+    font-size: 50px;
+    font-family: 'Newsreader', serif;
+}
+
+.comClient {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.avis{
+    padding:2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+}
+
+.avis img{
+    height: 150px;
+    width: 150px;
+}
+
+.avis p{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 0%;
+}
+
+.avis h4{
+    margin-top: 10%;
+}
+
+
+
+/*INSCRIPTION*/
+
+.main{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('https://www.createursdinterieur.com/static/09ddd80eb598981cca66cfe291440c66/d8255/architecte-interieur-salon-maison-contemporaine.jpg');
+    background-image: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.formContainer{
+    width: 450px;
+    height:630px;
+    /* margin-bottom: 3%;
+    margin-top: 4%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Libre Baskerville', serif;
+    background-color: rgb(108, 158, 165);
+    border-radius: 15px;
+    margin-left: 5%;
+}
+
+.formContainer h1{
+    margin-top: 2%;
+    color: snow;
+}
+.formContainer input[type="text"],input[type="password"]{
+    width: 300px;
+    height:50px;
+    border-radius: 15px;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 3%;
+}
+
+.formContainer input[type="submit"]{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    width: 100px;
+    height:25px;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 15%;
+}
+
+#lienCo{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-size: 20px;
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+}
+
+/*CONNEXION*/
+.formContainerCo{
+    width: 450px;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Libre Baskerville', serif;
+    background-color: rgb(108, 158, 165);
+    border-radius: 15px;
+    margin-left: 5%;
+}
+
+.formContainerCo h1{
+    margin-top: 2%;
+    color: snow;
+}
+.formContainerCo input[type="text"],input[type="password"]{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    width: 300px;
+    height:50px;
+    border-radius: 15px;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 3%;
+}
+
+.formContainerCo input[type="submit"]{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    width: 100px;
+    height:25px;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 15%;
+}
+
+/*PRoFIL*/
+
+.mainProfil{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-image: url("https://lecolefrancaise.fr/wp-content/uploads/2022/03/Bases-de-la-decoration-interieur-2.jpg");
+}
+
+#profiltitre{
+    color: snow
+}
+
+.infoProfil{
+    display: flex;
+    margin-bottom:2%;
+}
+
+.mesInfos{
+    width: 900px;
+    margin-top: 0%;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 5%;
+    background-color: rgb(250,250,250, 0.8);
+
+}
+
+
+.mesRdvs{
+    width: 400px;
+    margin-top: 0%;
+    margin-left: 10%;
+    border-radius: 15px;
+    padding: 5%;
+    font-size: 20px;
+    background-color: rgb(250,250,250, 0.8);
+}
+
+.mesRdvs h4 {
+    padding: 5%;
+}
+
+/*PRISE DE RDV*/
+
+.mainRdv{
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: column;
+    height: 95vh;
+    background-image: url('https://passion-aquitaine.ouest-france.fr/wp-content/uploads/2017/08/panorama-san-sebastian.jpg');
+    background-image: cover;
+    padding-bottom: 5%;
+}
+
+.formRdv{
+    width: 600px;
+    height: 600px;
+    border: solid 1px black;
+    border-radius: 15px;
+    padding: 3%;
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    background-color: rgb(243, 246, 246, 1);
+}
+
+.formRdv input[name="descriptif"]{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    width: 450px;
+    height:75px;
+    border-radius: 15px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.formRdv input[name="date"]{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    width: 200px;
+    height:50px;
+    font-size: 18px;
+    border-radius: 15px;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.formRdv input[type="submit"]{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    width: 100px;
+    height:30px;
+    border-radius: 15px;
+    font-family: 'Libre Baskerville', serif;
+    margin-left: 37%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.datedispo{
+    background-color: lightgray;
+    margin-top:2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+
+/*ADMIN*/
+.formAjoutDate{
+    margin-top:5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 1px black;
+    padding: 5%;
+}
+
+.formAjoutDate input[type="text"]{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    width: 300px;
+    height:50px;
+    border-radius: 15px;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 3%;
+    padding: 5%;
+}
+
+.formAjoutDate input[type="submit"]{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    width: 150px;
+    height:50px;
+    border-radius: 15px;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 3%;
+    
+}
+
+table td{
+    border: solid 1px black;
+}
+
+.mainAdmin{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction:row;
+    min-height: 90vh;
+}
+
+.formModif input{
+    width: 100px;
+}
+
+.adminBlockDroite section{
+    margin-top: 2%;
+}
+
+/*PRESENTATION*/
+.mainPresentation{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.imgPresentation img{
+    margin-left: 5%;
+    width: 500px;
+    height: 600px;
+    border-radius: 15px;
+}
+
+.textDpresentation{
+    width: 800px;
+    height: 600px;
+}
+
+
+
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom:0;
+    width: 100%;
+    height: 130px;
+    background-color: rgba(187, 182, 182, 0.8);
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 25px;
+   list-style: none;
+}
+
+.logoFooter img{
+    height: 130px;
+    width: 150px;
+}
+
+footer section ul li{
+    list-style: none;
+}
+/*DECONNEXION*/
+
+.maindeco{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    height: 90vh;
+}
+
+
+/*ERROR*/
+.msgError{
+    color: red;
+    background-color: snow;
+}
+
+.msgValid{
+    color: green;
+}
