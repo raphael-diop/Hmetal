@@ -35,9 +35,18 @@ class Utilisateurs extends Bdd{
 
             // Si aucun utilisateur n'a ce login alors je le rentre ne base 
             if(($result2) == 0){
-                $requetesql1 = "INSERT INTO `utilisateurs` (`nom`, `prenom`,`addresse`,`tel`,`ville`, `email`,`password`, `id_droit`) VALUES ('$this->nom','$this->prenom','$this->addresse','$this->tel','$this->ville', '$this->email', '$this->password', 1)";
+                $requetesql1 = "INSERT INTO `utilisateurs` (`nom`, `prenom`,`addresse`,`tel`,`ville`, `email`,`password`, `id_droit`) VALUES (:nom, :prenom, :addresse, :tel, :ville, :email, :password, :id_droit)";
                 $calcul1 = $this->Bdd->prepare($requetesql1);
-                $calcul1 -> execute();
+                $calcul1 -> execute([
+                    ':nom' => $this->nom,
+                    ':prenom' => $this->prenom,
+                    ':addresse' => $this->addresse,
+                    ':tel' => $this->tel,
+                    ':ville' => $this->ville, 
+                    ':email' => $this->email, 
+                    ':password' => $this->password,
+                    'id_droit' => 1
+                ]);
                 $_SESSION['message'] = '<div class="messageERR">'.'Inscription reussie'.'</div>';
                 header('Refresh: 2; url=connexion.php');
             }else{$_SESSION['message'] = '<div class="messageERR">'."Cet Email déjà utilisé".'</div>';}
@@ -56,15 +65,19 @@ class Utilisateurs extends Bdd{
         $this->password = $password;
 
         //recupération du login dans BDD
-        $request = "SELECT `email` FROM `utilisateurs` WHERE `email` = '$this->email'";
+        $request = "SELECT `email` FROM `utilisateurs` WHERE `email` = :email";
         $calcul = $this->Bdd->prepare($request);
-        $calcul -> execute();
+        $calcul -> execute([
+            ':email' =>$this->email
+        ]);
         $result = $calcul->rowCount();
 
          //recupération du password dans BDD
-        $request2 = "SELECT password FROM `utilisateurs` WHERE `email` = '$this->email'";
+        $request2 = "SELECT password FROM `utilisateurs` WHERE `email` = :email";
         $calcul2 = $this->Bdd->prepare($request2);
-        $calcul2 -> execute();
+        $calcul2 -> execute([
+            'email' => $this->email
+        ]);
         // On utilise fetchColumn car la fonction password_verify a besoin d'un résultat sous forme de string
         $result2 = $calcul2-> fetchColumn();
        
@@ -79,9 +92,11 @@ class Utilisateurs extends Bdd{
             //vérification du password
             if(password_verify($password, $check_password)){
                 // Si le password est vérifié alors on récupère toutes les infos user et on les met dans la session
-                $request3 = "SELECT*FROM `utilisateurs` WHERE `email` = '$this->email'";
+                $request3 = "SELECT*FROM `utilisateurs` WHERE `email` = :email";
                 $calcul3 = $this->Bdd->prepare($request3);
-                $calcul3 -> execute();
+                $calcul3 -> execute([
+                    'email' => $this->email
+                ]);
                 $result3 = $calcul3-> fetch(PDO::FETCH_ASSOC);
 
                 // var_dump($result3);
